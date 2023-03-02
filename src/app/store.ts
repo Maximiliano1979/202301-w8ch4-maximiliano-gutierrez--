@@ -1,7 +1,8 @@
 import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
+import { calculatorReducer } from "../store/features/calculatorSlice";
 
 export const store = configureStore({
-  reducer: {},
+  reducer: { calculator: calculatorReducer },
 });
 
 export type AppDispatch = typeof store.dispatch;
